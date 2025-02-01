@@ -42,11 +42,35 @@
   --family-sans: "Figtree", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  background-color: var(--yellow);
+  color: var(--gray-500);
   font-family: var(--family-sans);
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: var(--text-preset-2);
   line-height: var(--line-preset-1);
+}
+
+h2 {
+  font-size: var(--text-preset-1);
+  font-weight: 800;
+}
+
+time {
+  font-size: var(--text-preset-3);
+  display: block;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
 }
