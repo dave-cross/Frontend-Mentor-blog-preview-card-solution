@@ -148,6 +148,7 @@ picture {
 }
 
 .card__footer {
+  color: var(--gray-950);
   font-size: var(--text-preset-3-lg);
   font-weight: 800;
 
