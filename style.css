@@ -1,0 +1,52 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  --space-50: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-300: 24px;
+
+  --radius-lg: 20px;
+  --radius-md: 10px;
+  --radius-sm: 4px;
+
+  --text-preset-1-lg: 24px;
+  --text-preset-2-lg: 16px;
+  --text-preset-3-lg: 14px;
+  --text-preset-1-sm: 20px;
+  --text-preset-2-sm: 14px;
+  --text-preset-3-sm: 12px;
+
+  /* @link https://utopia.fyi/clamp/calculator?a=327,384,20—24|14—16|12—14 */
+  --text-preset-1: clamp(
+    var(--text-preset-1-sm),
+    -2.9474px + 7.0175cqi,
+    var(--text-preset-1-lg)
+  );
+  --text-preset-2: clamp(
+    var(--text-preset-2-sm),
+    2.5263px + 3.5088cqi,
+    var(--text-preset-2-lg)
+  );
+  --text-preset-3: clamp(
+    var(--text-preset-3-sm),
+    0.5263px + 3.5088cqi,
+    var(--text-preset-3-lg)
+  );
+
+  --line-preset-1: 1.5;
+
+  --family-sans: "Figtree", sans-serif;
+}
+
+body {
+  font-family: var(--family-sans);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-preset-2);
+  line-height: var(--line-preset-1);
+}
