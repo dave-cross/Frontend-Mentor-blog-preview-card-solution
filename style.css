@@ -40,6 +40,8 @@
   --line-preset-1: 1.5;
 
   --family-sans: "Figtree", sans-serif;
+
+  --max-width: 384px;
 }
 
 * {
@@ -73,4 +75,26 @@ img,
 picture {
   display: block;
   max-width: 100%;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-space, var(--space-150));
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.challenge-wrapper {
+  --max-child-width: var(--max-width, 320px);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-300)
+    max(var(--space-300), calc(50% - var(--max-child-width) / 2));
 }
